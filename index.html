@@ -1506,52 +1506,24 @@ function closeDiagramBtn() {
 }
 
 // ═══════════════════════════════════════════
-//  AI SECTION
+//  WHATSAPP CONTACT
 // ═══════════════════════════════════════════
 
-let aiOpen = false;
-function toggleAI() {
-  aiOpen = !aiOpen;
-  document.getElementById('ai-body').classList.toggle('open', aiOpen);
-  document.getElementById('ai-caret').textContent = aiOpen ? '▴' : '▾';
-}
-
-async function askAI() {
+function sendWhatsApp() {
   const input = document.getElementById('ai-input');
   const q = input.value.trim();
   if (!q) return;
 
-  const btn = document.getElementById('ai-btn');
-  btn.disabled = true;
-  btn.textContent = '...';
+  const numero = '261337804805'; // ← CHANGE ICI si besoin
+  const message = encodeURIComponent('🎸 Guitar Master — Question :\n\n' + q);
+  const url = `https://wa.me/${numero}?text=${message}`;
 
-  const answerBox = document.getElementById('ai-answer');
-  const answerText = document.getElementById('ai-text');
-  answerBox.classList.add('show');
-  answerText.textContent = 'Le professeur réfléchit...';
-
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        system: `Tu es un professeur de guitare expert et passionné. Tu réponds en français avec des conseils clairs, pratiques et encourageants. Tu utilises des exemples concrets, mentionnes les doigtés, les positions des mains, et tu restes concis (max 150 mots). Si une question ne concerne pas la guitare ou la musique, redirige poliment vers ce sujet.`,
-        messages: [{ role: 'user', content: q }]
-      })
-    });
-    const data = await res.json();
-    const text = data.content?.map(c => c.text || '').join('') || 'Désolé, je n\'ai pas pu répondre.';
-    answerText.textContent = text;
-  } catch (e) {
-    answerText.textContent = 'Erreur de connexion au professeur IA. Vérifie ta connexion.';
-  }
-
-  btn.disabled = false;
-  btn.textContent = 'Envoyer';
+  const waLink = document.getElementById('wa-link');
+  waLink.href = url;
+  waLink.style.display = 'flex';
+  window.open(url, '_blank');
   input.value = '';
-}
+  }
 
 // ═══════════════════════════════════════════
 //  ROTATING TIPS
