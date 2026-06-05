@@ -250,18 +250,20 @@ aside{width:210px;background:var(--bg2);border-right:1px solid var(--border);pad
 .tuto-badge{font-size:9px;letter-spacing:2px;padding:3px 10px;border-radius:4px;border:1px solid;}
 .tuto-desc{font-size:11px;color:#5a7a5a;line-height:1.8;}
 
-/* AI SECTION */
+/* WHATSAPP SECTION */
 .ai-section{border-top:1px solid var(--border);background:var(--bg);flex-shrink:0;}
 .ai-toggle{padding:11px 28px;cursor:pointer;display:flex;align-items:center;gap:10px;font-size:11px;color:#3a5a2a;letter-spacing:2px;user-select:none;}
-.ai-toggle:hover{color:#5a7a3a;}
+.ai-toggle:hover{color:#25D366;}
 .ai-body{display:none;padding:0 28px 18px;}
 .ai-body.open{display:block;}
+.wa-box{display:flex;flex-direction:column;gap:12px;}
+.wa-desc{font-size:11px;color:#3a5a3a;line-height:1.7;}
 .ai-input-row{display:flex;gap:10px;}
 #ai-input{flex:1;background:#0a0d08;border:1px solid #1a2a12;border-radius:6px;padding:10px 14px;color:#c0d0a0;font-family:'Share Tech Mono',monospace;font-size:12px;outline:none;}
-#ai-input:focus{border-color:var(--accent);}
-.ai-answer{margin-top:12px;background:#0c0f0a;border:1px solid #1a2a12;border-radius:8px;padding:14px 18px;font-size:12px;color:var(--text2);line-height:1.8;white-space:pre-wrap;display:none;}
-.ai-answer.show{display:block;}
-.ai-label{color:var(--accent);font-size:10px;letter-spacing:2px;display:block;margin-bottom:8px;}
+#ai-input:focus{border-color:#25D366;}
+.btn-wa{background:linear-gradient(135deg,#075e54,#128c7e);border:1px solid #25D366;color:#fff;}
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#075e54,#128c7e);border:1px solid #25D366;border-radius:8px;color:#fff;font-family:'Share Tech Mono',monospace;font-size:12px;letter-spacing:2px;padding:12px 20px;text-decoration:none;transition:opacity .2s;}
+.wa-btn:hover{opacity:.85;}
 
 /* SONGS LIST */
 .songs-list{display:flex;flex-direction:column;gap:10px;margin-bottom:22px;}
