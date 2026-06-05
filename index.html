@@ -417,22 +417,23 @@ aside{width:210px;background:var(--bg2);border-right:1px solid var(--border);pad
       <div id="accords-grid" style="display:flex;flex-wrap:wrap;gap:10px;"></div>
     </div>
 
-    <!-- AI -->
-    <div class="ai-section">
-      <div class="ai-toggle" onclick="toggleAI()">
-        <span style="color:var(--accent);">◈</span> Demandé au créateur Fandala 
-        <span style="margin-left:auto;color:#2a3a2a;" id="ai-caret">▾</span>
+    <
+    <!-- WHATSAPP CONTACT -->
+<div class="ai-section">
+  <div class="ai-toggle" onclick="toggleAI()">
+    <span style="color:#25D366;">◈</span> CONTACTER LE CRÉATEUR FANDALA 
+    <span style="margin-left:auto;color:#2a3a2a;" id="ai-caret">▾</span>
+  </div>
+  <div class="ai-body" id="ai-body">
+    <div class="wa-box">
+      <div class="wa-desc">Tu as une question sur un accord, une chanson ou l'app ? Envoie un message directement à Fandala.</div>
+      <div class="ai-input-row">
+        <input type="text" id="ai-input" placeholder="Ex: Comment jouer l'accord de FA ?" onkeydown="if(event.key==='Enter')sendWhatsApp()"/>
+        <button class="btn btn-wa" id="ai-btn" onclick="sendWhatsApp()">Envoyer</button>
       </div>
-      <div class="ai-body" id="ai-body">
-        <div class="ai-input-row">
-          <input type="text" id="ai-input" placeholder="Ahoana ny hevitrao ?" onkeydown="if(event.key==='Enter')askAI()"/>
-          <button class="btn btn-gold" id="ai-btn" onclick="askAI()">Envoyer</button>
-        </div>
-        <div class="ai-answer" id="ai-answer">
-          <span class="ai-label">Créateur Fandala</span>
-          <span id="ai-text"></span>
-        </div>
-      </div>
+      <a id="wa-link" class="wa-btn" href="#" target="_blank" style="display:none;">
+        <span>💬</span> Ouvrir WhatsApp
+      </a>
     </div>
   </div>
 </div>
