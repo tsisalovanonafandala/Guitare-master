@@ -875,7 +875,7 @@ const CHORD_DATA = {
     fingers: [  1,  3,  4,  1,  1,  1  ], // ← DOIGTS
     barre: 1, // ← BARRE : frette du barré
   },
-   'DO^SOL': {
+   'DO/SOL': {
       full: 'Do basse Sol', tip: 'x02010',
       frets: [ null, 0, 2, 0, 1, 0 ],
       fingers: [ null, 0, 2, 0, 1, 0 ],
@@ -917,7 +917,7 @@ let songs = [
         type: 'couplet',
         label: 'Couplet 1',
         lyrics:
-`[SOL]         Mba rahovi[DO]ana eh ty tany it[SOL]y[DO]
+`[SOL]         Mba rahovi[DO/SOL]ana eh ty tany it[SOL]y[DO]
 [SOL]           Vao handry am-p[DO]ilaminana ho dor[SOL]ia[DO]
 [SOL]           Mba rahovi[DO]ana e! Ny olona et[SOL]y[DO]
 [SOL]          Vao hahay hifame[DO]la sy hifankati[SOL]a[DO][SOL] `
@@ -926,108 +926,12 @@ let songs = [
         type: 'refrain',
         label: 'Refrain',
         lyrics:
-`[SOL]Knock, knock, [RE]knockin' on heaven's [LAM]door
-[SOL]Knock, knock, [RE]knockin' on heaven's [LAM]door`
+``
       }
     ]
   },
   {
-    id: 2,
-    title: "La Bamba",
-    artist: "Ritchie Valens",
-    chords: ['DO', 'FA', 'SOL'],
-    sections: [
-      {
-        type: 'intro',
-        label: 'Intro',
-        chords: ['DO', 'FA', 'SOL']
-      },
-      {
-        type: 'couplet',
-        label: 'Couplet 1',
-        lyrics:
-`[DO]Para bailar [FA]la bamba
-[SOL]Para bailar la [DO]bamba
-[FA]Se necesita una [SOL]poca de gracia
-[DO]Una poca de [FA]gracia
-[SOL]Pa' mi, pa' ti, ay [DO]arriba`
-      },
-      {
-        type: 'couplet',
-        label: 'Couplet 2',
-        lyrics:
-`[DO]Yo no soy [FA]marinero
-[SOL]Yo no soy [DO]marinero, soy capitán
-[FA]Soy capitán, [SOL]soy capitán`
-      }
-    ]
-  },
-  {
-    id: 3,
-    title: "Stand By Me",
-    artist: "Ben E. King",
-    chords: ['LA', 'FAM', 'RE', 'MI'],
-    sections: [
-      {
-        type: 'intro',
-        label: 'Intro',
-        chords: ['LA', 'FAM', 'RE', 'MI']
-      },
-      {
-        type: 'couplet',
-        label: 'Couplet 1',
-        lyrics:
-`[LA]When the night has come
-And the land is [FAM]dark
-And the moon is the [RE]only light we'll [MI]see
-[LA]No I won't be afraid
-No I [FAM]won't be afraid
-Just as [RE]long as you stand, [MI]stand by [LA]me`
-      },
-      {
-        type: 'refrain',
-        label: 'Refrain',
-        lyrics:
-`[LA]So darling, darling [FAM]stand by me
-Oh [RE]stand by [MI]me
-Oh [LA]stand, stand by me
-[FAM]Stand by [RE]me [MI] [LA]`
-      }
-    ]
-  },
-  {
-    id: 4,
-    title: "Wonderwall",
-    artist: "Oasis",
-    chords: ['MIM', 'SOL', 'RE', 'LAM'],
-    sections: [
-      {
-        type: 'intro',
-        label: 'Intro',
-        chords: ['MIM', 'SOL', 'RE', 'LAM']
-      },
-      {
-        type: 'couplet',
-        label: 'Couplet 1',
-        lyrics:
-`[MIM]Today is gonna be the day
-That they're gonna [SOL]throw it back to you
-[MIM]By now you should've somehow
-Realized [SOL]what you gotta do
-[MIM]I don't believe that anybody
-Feels the way I [SOL]do about you [RE]now`
-      },
-      {
-        type: 'refrain',
-        label: 'Refrain',
-        lyrics:
-`[LAM][SOL]Backbeat the word was on the street
-That the fire in your [MIM]heart is out
-[LAM][SOL]I'm sure you've heard it all before
-But you never really [MIM]had a doubt`
-      }
-    ]
-  }
+  
 ];
 
 let tutorials = [
