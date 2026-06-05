@@ -1572,9 +1572,18 @@ setInterval(() => {
 // ═══════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════
+document.addEventListener('click', function(e) {
+  const badge = e.target.closest('.intro-chord-badge, .chord-above, .chord-tag');
+  if (badge) {
+    const chord = badge.dataset.chord || badge.textContent.trim();
+    if (chord) showDiagram(chord);
+  }
+});
+
 if (!checkExistingSession()) {
   initLoginScreen();
 }
+renderSongs();
 renderSongs();
 </script>
 </body>
