@@ -740,7 +740,7 @@ const CHORD_DATA = {
   //                    E     A      D   G   B   e
   //                    ↓     ↓      ↓   ↓   ↓   ↓
   'DO': {
-    full: 'Do Drop C', tip: '0x2010',
+    full: 'Do Majeur', tip: '0x2010',
     frets:   [  0,  null,   2,  0,  1,  0  ], // ← FRETTES   : change les chiffres ici
     fingers: [  0,  null,   2,  0,  1,  0  ], // ← DOIGTS    : change les chiffres ici
   },
@@ -1328,7 +1328,7 @@ function buildFretboard(data) {
   // data.fingers = same order, finger number (0=none)
   const frets   = data.frets;
   const fingers = data.fingers || frets.map(() => 0);
-  const stringNames = ['Mi', 'La', 'Ré', 'Sol', 'Si', 'Mi'];
+  const stringNames = ['Do', 'Sol', 'Ré', 'Sol', 'Si', 'Mi'];
 
   const NUM_STRINGS = 6;
   const NUM_FRETS   = 4; // visible fret rows
